@@ -1,9 +1,15 @@
+/* Base y contenedor principal */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1px;
 }
 
+body {
+  font-size: 18px;
+}
+
+/* Tarjetas */
 .card {
   width: 100%;
   max-width: 350px;
@@ -70,6 +76,7 @@
   margin-bottom: 15px;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -106,6 +113,7 @@
   color: cadetblue;
 }
 
+/* Encabezado */
 .header {
   border-radius: 0 0 10px 10px;
   background-size: cover;
@@ -132,27 +140,9 @@
   color: white;
 }
 
-.pagar-btn {
-  position: sticky;
-  width: 100%;
-  padding: 10px;
-  background-color: white;
-  border-top: 1px solid #ddd;
-  text-align: center;
-}
-
 @keyframes changeBackground {
-  0% {
-    background-image: url('img/banner.jpg');
-  }
-  33% {
-    background-image: url('img/banner1.jpg');
-  }
-  66% {
-    background-image: url('img/banner2.jpg');
-  }
-  100% {
-    background-image: url('img/banner.jpg');
+  0%, 33%, 66%, 100% {
+    background-image: url('./assets/img/3.jpg');
   }
 }
 
@@ -162,22 +152,32 @@
   }
 }
 
+/* Botón de pago */
+.pagar-btn {
+  position: sticky;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Contenedores y columnas */
 .container {
   width: 100%;
   padding-left: 0;
   padding-right: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Cambiado a center */
+  justify-content: center;
 }
-
 
 .col-md-4 {
-  flex: 1 1 calc(33.333% - 20px); /* Permite que cada tarjeta ocupe un tercio del ancho con espacio */
-  margin-left: 10px;
-  margin-right: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  margin: 10px;
 }
 
+/* Footer */
 .footer {
   background-color: #343a40;
   color: white;
@@ -192,6 +192,7 @@
   margin: 0;
 }
 
+/* Utilidades */
 .text-center {
   text-align: center;
 }
@@ -231,8 +232,7 @@
   outline: none;
 }
 
-/* llamar solo a los botones que estan en Register y Login para no perder las tarjetas*/
-
+/* Botones de login y registro */
 .login-form button.btn,
 .register-form button.btn {
   width: 50%;
@@ -254,6 +254,7 @@
 }
 
 .register-form, .login-form {
+  width: 100%;
   max-width: 350px;
   margin: 70px auto;
   padding: 20px;
@@ -268,6 +269,7 @@
   color: #333;
 }
 
+/* Mensajes */
 .error-message, .success-message {
   text-align: center;
   font-size: 0.9rem;
@@ -282,34 +284,7 @@
   color: green;
 }
 
-/* Responsivo */
-
-/* Para pantallas pequeñas (celulares) */
-@media (max-width: 767px) {
-  .col-md-4 {
-    flex: 1 1 100%;
-  }
-
-  .navbar {
-    flex-direction: column;
-  }
-
-  .register-form, .login-form {
-    width: 100%;
-    padding: 15px;
-  }
-
-  button.btn {
-    font-size: 1rem;
-  }
-}
-
-/* Para pantallas medianas (tablets) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .col-md-4 {
-    flex: 1 1 45%;
-  }
-}
+/* Perfil */
 .profile {
   padding: 20px;
   margin: 20px auto;
@@ -344,8 +319,9 @@
 
 .profile button:hover {
   background-color: #a71d2a;
-  color: white;
 }
+
+/* Página 404 */
 .not-found-container {
   text-align: center;
   padding: 50px;
@@ -357,4 +333,30 @@
   max-width: 100%;
   height: auto;
   margin-top: 20px;
+}
+
+/* Media Queries - Responsivo */
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex: 1 1 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .register-form, .login-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button.btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .col-md-4 {
+    flex: 1 1 45%;
+  }
 }

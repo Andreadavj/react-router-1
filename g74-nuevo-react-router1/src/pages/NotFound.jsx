@@ -11,7 +11,7 @@ const NotFound = () => {
         Tal vez quieras volver a la <Link to="/">página de inicio</Link>.
       </p>
       <img 
-        src="https://example.com/your-image.png" 
+        src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
         alt="Página no encontrada" 
         className="not-found-image" 
       />
